@@ -1,0 +1,46 @@
+<html>
+    <body  style="background-image: url('Downloader.la.jpg');">
+    <!-- The video -->
+            
+    <center>
+            
+      <style> 
+      h1 {color: rgb(183, 255, 243); }
+      b {color: rgb(255, 255, 255);}
+      form { text-align: center; }
+      input[type="submit"] {
+       background-color: rgb(30, 179, 0); /* Change to your desired color */
+       color: rgb(37, 0, 0); /* Text color */
+       padding: 10px 20px; /* Adjust padding as needed */
+       cursor: pointer; /* Add pointer cursor on hover */
+      }
+      label {
+       background-color: blue; /* Change to your desired color */
+       color: white; /* Text color */
+       padding: 10px 20px; /* Adjust padding as needed */
+       cursor: pointer; /* Change cursor to indicate a clickable element */
+      }
+      </style>
+      
+      <br><br>
+         
+     <h1> Welcome To The "CATCH CARS" Site </h1><br>
+     
+     <form method="POST", action="{{url_for('home')}}" enctype="multipart/form-data">
+       <b> <input type="file" id="fileInput" name="fileInput" accept="image/*"><br> <br><br> <br>
+        <input type="submit", value='drag image file and tap to detect cars :)' disabled ><br>  <br><br> <br></b>
+     </form>
+
+     
+     
+     </center>
+     
+        
+        <video autoplay muted loop id="myVideo">
+        <source src="vid2.mp4" type="video/mp4">
+        </video>
+        
+        
+
+    </body>
+</html>

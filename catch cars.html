@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      background-image: url('Downloader.la.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    h1 {
+      background-color: rgb(14, 183, 212);
+      color: rgb(251, 255, 0);
+      font-size: 47px; /* Adjust the font size as needed */
+      display: -webkit-inline-box; /* Adjust display property */
+    }
+    h2 {
+      color: rgb(193, 173, 224);
+      font-size: 30px; /* Adjust the font size as needed */
+      padding: 10px 20px;
+      cursor: auto;
+      display: block; /* Adjust display property */
+    }
+
+    b {
+      color: rgb(255, 255, 255);
+    }
+
+    form {
+      text-align: center;
+    }
+
+   
+
+    label {
+      display: none; /* Adjust display property */
+    }
+
+    input[type="submit"] {
+      background-color: rgb(43, 255, 0);
+      color: rgb(0, 0, 0);
+      padding: 10px 20px;
+      cursor: unset; /* Default cursor style */
+      display: inline-block; /* Adjust display property */
+    }
+
+    input[type="file"]:focus+label,
+    input[type="file"]:hover+label {
+      background-color: rgb(0, 191, 255); /* Change to your desired hover color */
+    }
+
+    input[type="file"]:valid+label {
+      cursor: pointer;
+      background-color: rgb(159, 159, 214);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- The video -->
+  <center>
+    <br><br>
+    <h1>Welcome To The "CATCH CARS" Site</h1>
+    <h2>Click "Choose File" below to browse an image file</h2>
+    <form method="POST" action="{{url_for('home')}}" >
+      <b>
+        <label for="fileInput" >Click "Choose File" to browse a file </label>
+        <input type="file" id="fileInput" name="fileInput" accept="image/*" required> <br><br><br>
+        <input type="submit" value='detect cars' >
+      </b>
+    </form>
+    <br>
+  </center>
+
+  <video autoplay muted loop id="myVideo">
+    <source src="SWP2.mp4" type="video/mp4">
+  </video>
+</body>
+
+</html>
